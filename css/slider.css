@@ -1,0 +1,513 @@
+@charset "UTF-8";
+/* CSS Document */
+
+#slider {
+    position: relative;
+    overflow: hidden;
+}
+#slider::after {
+    clear: both;
+}
+
+.dissolve {
+    height: auto;
+    overflow: hidden;
+    
+    -webkit-animation: dissolveAnimation 1s; /* Chrome, Safari, Opera */
+    -moz-animation: dissolveAnimation 1s; /* Chrome, Safari, Opera */
+    animation: dissolveAnimation 1s;
+    transition-timing-function: ease-out;
+}
+
+.slideUp {
+    height: auto;
+    overflow: hidden;
+    
+    -webkit-animation: slideUpAnimation 1s; /* Chrome, Safari, Opera */
+    -moz-animation: slideUpAnimation 1s; /* Chrome, Safari, Opera */
+    animation: slideUpAnimation 1s;
+    transition-timing-function: ease-in-out;
+}
+
+.slideDown {
+    height: auto;
+    overflow: hidden;
+    
+    -webkit-animation: slideDownAnimation 1s; /* Chrome, Safari, Opera */
+    -moz-animation: slideDownAnimation 1s; /* Chrome, Safari, Opera */
+    animation: slideDownAnimation 1s;
+    transition-timing-function: ease-in-out;
+}
+
+.slideLeft {
+    height: auto;
+    overflow: hidden;
+    
+    -webkit-animation: slideLeftAnimation 1s; /* Chrome, Safari, Opera */
+    -moz -animation: slideLeftAnimation 1s; /* Chrome, Safari, Opera */
+    animation: slideLeftAnimation 1s;
+    transition-timing-function: ease-in-out;
+}
+
+.slideRight {
+    height: auto;
+    overflow: hidden;
+    
+    -webkit-animation: slideRightAnimation 1s; /* Chrome, Safari, Opera */
+    -moz -animation: slideRightAnimation 1s; /* Chrome, Safari, Opera */
+    animation: slideRightAnimation 1s;
+    transition-timing-function: ease-in-out;
+}
+
+
+.mosaicBlock {
+    width: 100px;
+    height: 100px;
+    float: left;
+    overflow: hidden;
+
+    -webkit-animation: myfirst 1s; /* Chrome, Safari, Opera */
+    -moz-animation: myfirst 1s; /* Chrome, Safari, Opera */
+    animation: myfirst 1s;
+    transition-timing-function: ease-in-out;
+}
+
+
+.windowBlock {
+    width: 300px;
+    height: auto;
+    float: left;
+    overflow: hidden;
+
+    -webkit-animation: windowAnimation 1s; /* Chrome, Safari, Opera */
+    -moz-animation: windowAnimation 1s; /* Chrome, Safari, Opera */
+    animation: windowAnimation 1s;
+    transition-timing-function: ease-in-out;
+}
+
+.imagePush {
+    height: auto;
+    float: left;
+    overflow: hidden;
+
+    -webkit-animation: imagePushAnimation 1s; /* Chrome, Safari, Opera */
+    -moz-animation: imagePushAnimation 1s; /* Chrome, Safari, Opera */
+    animation: imagePushAnimation 1s;
+    transition-timing-function: ease-in-out;
+}
+
+.imagePush2 {
+    height: auto;
+    float: left;
+    overflow: hidden;
+
+    -webkit-animation: imagePush2Animation 1s; /* Chrome, Safari, Opera */
+    -moz-animation: imagePush2Animation 1s; /* Chrome, Safari, Opera */
+    animation: imagePush2Animation 1s;
+    transition-timing-function: ease-in-out;
+
+}
+
+/* 
+Animations
+*/
+
+
+/*Dissolve Animation */
+
+/* Chrome, Safari, Opera */
+@-webkit-keyframes dissolveAnimation {
+    from {
+        opacity: 1.0;
+    }
+    to {
+        opacity: 0.0;
+        filter: alpha(opacity=00); /* For IE8 and earlier */
+    }
+}
+
+/* Mozilla */
+@-moz-keyframes dissolveAnimation {
+    from {
+        opacity: 1.0;
+    }
+    to {
+        opacity: 0.0;
+        filter: alpha(opacity=00); /* For IE8 and earlier */
+    }
+}
+
+
+/* Standard syntax */
+@keyframes dissolveAnimation {
+    from {
+        opacity: 1.0;
+    }
+    to {
+        opacity: 0.0;
+        filter: alpha(opacity=00); /* For IE8 and earlier */
+    }
+}
+
+
+/*Slide Up Animation */
+
+/* Chrome, Safari, Opera */
+@-webkit-keyframes slideUpAnimation {
+    from {
+        -webkit-transform: translate(0,0);
+    }
+    to {
+        -webkit-transform: translate(0,-500px);
+        opacity: 0.0;
+        filter: alpha(opacity=00); /* For IE8 and earlier */
+    }
+}
+
+/* Mozilla */
+@-moz-keyframes slideUpAnimation {
+    from {
+        -moz-transform: translate(0,0);
+    }
+    to {
+        -moz-transform: translate(0,-500px);
+        opacity: 0.0;
+        filter: alpha(opacity=00); /* For IE8 and earlier */
+    }
+}
+
+
+/* Standard syntax */
+@keyframes slideUpAnimation {
+    from {
+        transform: translate(0,0);
+    }
+    to {
+        transform: translate(0,-500px);
+        opacity: 0.0;
+        filter: alpha(opacity=00); /* For IE8 and earlier */
+    }
+}
+
+/*Slide Down Animation */
+
+/* Chrome, Safari, Opera */
+@-webkit-keyframes slideDownAnimation {
+    from {
+        -webkit-transform: translate(0,0);
+    }
+    to {
+        -webkit-transform: translate(0,500px);
+        opacity: 0.0;
+        filter: alpha(opacity=00); /* For IE8 and earlier */
+    }
+}
+
+/* Mozilla */
+@-moz-keyframes slideDownAnimation {
+    from {
+        -moz-transform: translate(0,0);
+    }
+    to {
+        -moz-transform: translate(0,500px);
+        opacity: 0.0;
+        filter: alpha(opacity=00); /* For IE8 and earlier */
+    }
+}
+
+
+/* Standard syntax */
+@keyframes slideDownAnimation {
+    from {
+        transform: translate(0,0);
+    }
+    to {
+        transform: translate(0,500px);
+        opacity: 0.0;
+        filter: alpha(opacity=00); /* For IE8 and earlier */
+    }
+}
+
+/*Slide Left Animation */
+
+/* Chrome, Safari, Opera */
+@-webkit-keyframes slideLeftAnimation {
+    from {
+        -webkit-transform: translate(0,0);
+    }
+    to {
+        -webkit-transform: translate(-500px,0);
+        opacity: 0.0;
+        filter: alpha(opacity=00); /* For IE8 and earlier */
+    }
+}
+
+/* Mozilla */
+@-moz-keyframes slideLeftAnimation {
+    from {
+        -moz-transform: translate(0,0);
+    }
+    to {
+        -moz-transform: translate(-500px,0);
+        opacity: 0.0;
+        filter: alpha(opacity=00); /* For IE8 and earlier */
+    }
+}
+
+/* Standard syntax */
+@keyframes slideLeftAnimation {
+    from {
+        transform: translate(0,0);
+    }
+    to {
+        transform: translate(-500px,0);
+        opacity: 0.0;
+        filter: alpha(opacity=00); /* For IE8 and earlier */
+    }
+}
+
+
+/*Slide Right Animation */
+
+/* Chrome, Safari, Opera */
+@-webkit-keyframes slideRightAnimation {
+    from {
+        -webkit-transform: translate(0,0);
+    }
+    to {
+        -webkit-transform: translate(500px,0);
+        opacity: 0.0;
+        filter: alpha(opacity=00); /* For IE8 and earlier */
+    }
+}
+
+/* Mozilla */
+@-moz-keyframes slideRightAnimation {
+    from {
+        -moz-transform: translate(0,0);
+    }
+    to {
+        -moz-transform: translate(500px,0);
+        opacity: 0.0;
+        filter: alpha(opacity=00); /* For IE8 and earlier */
+    }
+}
+
+/* Standard syntax */
+@keyframes slideRightAnimation {
+    from {
+        transform: translate(0,0);
+    }
+    to {
+        transform: translate(500px,0);
+        opacity: 0.0;
+        filter: alpha(opacity=00); /* For IE8 and earlier */
+    }
+}
+
+
+/*Mosaic */
+/* Chrome, Safari, Opera */
+@-webkit-keyframes myfirst {
+    from {
+        -webkit-transform: scale(1,1);
+        display: block;
+    }
+    to {
+        -webkit-transform: scale(0,0);
+        display: none;
+        opacity: 0.0;
+        filter: alpha(opacity=00); /* For IE8 and earlier */
+    }
+}
+
+/* Mozilla */
+@-moz-keyframes myfirst {
+    from {
+        -moz-transform: scale(1,1);
+        display: block;
+    }
+    to {
+        -moz-transform: scale(0,0);
+        display: none;
+        opacity: 0.0;
+        filter: alpha(opacity=00); /* For IE8 and earlier */
+    }
+}
+
+/* Standard syntax */
+@keyframes myfirst {
+     from {
+        transform: scale(1,1);
+        display: block;
+    }
+    to {
+        transform: scale(0,0);
+        display: none;
+        opacity: 0.0;
+        filter: alpha(opacity=00); /* For IE8 and earlier */
+    }
+}
+
+
+/*Windows */
+
+@-webkit-keyframes windowAnimation {
+    from {
+        -ms-transform: rotateY(0deg); /* IE 9 */
+        -webkit-transform: rotateY(0deg); /* Chrome, Safari, Opera */
+        transform: rotateY(0deg);
+        display: block;
+    }
+    to {
+        -ms-transform: rotateY(90deg); /* IE 9 */
+        -webkit-transform: rotateY(90deg); /* Chrome, Safari, Opera */
+        transform: rotateY(90deg);
+        display: none;
+        opacity: 0.0;
+        filter: alpha(opacity=00); /* For IE8 and earlier */
+    }
+}
+
+@-moz-keyframes windowAnimation {
+    from {
+        -ms-transform: rotateY(0deg); /* IE 9 */
+        -moz-transform: rotateY(0deg); /* Chrome, Safari, Opera */
+        transform: rotateY(0deg);
+        display: block;
+    }
+    to {
+        -ms-transform: rotateY(90deg); /* IE 9 */
+        -moz-transform: rotateY(90deg); /* Chrome, Safari, Opera */
+        transform: rotateY(90deg);
+        display: none;
+        opacity: 0.0;
+        filter: alpha(opacity=00); /* For IE8 and earlier */
+    }
+}
+
+@keyframes windowAnimation {
+
+    from {
+        -ms-transform: rotateY(0deg); /* IE 9 */
+        -webkit-transform: rotateY(0deg); /* Chrome, Safari, Opera */
+        transform: rotateY(0deg);
+        display: block;
+    }
+    to {
+        -ms-transform: rotateY(90deg); /* IE 9 */
+        -webkit-transform: rotateY(90deg); /* Chrome, Safari, Opera */
+        transform: rotateY(90deg);
+        display: none;
+        opacity: 0.0;
+        filter: alpha(opacity=00); /* For IE8 and earlier */
+    }
+}
+
+/*Push */
+
+ @-webkit-keyframes imagePushAnimation {
+    from {
+        -ms-transform: translate(0px,0px); /* IE 9 */
+        -webkit-transform: rotateY(0px,0px); /* Chrome, Safari, Opera */
+        transform: translate(0px,0px);
+        display: block;
+    }
+    to {
+        -ms-transform: translate(100px,0px); /* IE 9 */
+        -webkit-transform: translate(100px,0px); /* Chrome, Safari, Opera */
+        transform: translate(100px,0px);
+        display: none;
+        opacity: 0.0;
+        filter: alpha(opacity=00); /* For IE8 and earlier */
+    }
+}
+
+ @-moz-keyframes imagePushAnimation {
+    from {
+        -ms-transform: translate(0px,0px); /* IE 9 */
+        -moz-transform: rotateY(0px,0px); /* Chrome, Safari, Opera */
+        transform: translate(0px,0px);
+        display: block;
+    }
+    to {
+        -ms-transform: translate(100px,0px); /* IE 9 */
+        -moz-transform: translate(100px,0px); /* Chrome, Safari, Opera */
+        transform: translate(100px,0px);
+        display: none;
+        opacity: 0.0;
+        filter: alpha(opacity=00); /* For IE8 and earlier */
+    }
+}
+
+
+@keyframes imagePushAnimation {
+
+    from {
+        -ms-transform: translate(0px,0px); /* IE 9 */
+        -webkit-transform: rotateY(0px,0px); /* Chrome, Safari, Opera */
+        transform: translate(0px,0px);
+        display: block;
+    }
+    to {
+        -ms-transform: translate(100px,0px); /* IE 9 */
+        -webkit-transform: translate(100px,0px); /* Chrome, Safari, Opera */
+        transform: translate(100px,0px);
+        display: none;
+        opacity: 0.0;
+        filter: alpha(opacity=00); /* For IE8 and earlier */
+    }
+}
+
+
+@-webkit-keyframes imagePush2Animation {
+    from {
+        -ms-transform: translate(0px,0px); /* IE 9 */
+        -webkit-transform: rotateY(0px,0px); /* Chrome, Safari, Opera */
+        transform: translate(0px,0px);
+        display: block;
+    }
+    to {
+        -ms-transform: translate(-150px,0px); /* IE 9 */
+        -webkit-transform: translate(-150px,0px); /* Chrome, Safari, Opera */
+        transform: translate(-150px,0px);
+        display: none;
+        opacity: 0.0;
+        filter: alpha(opacity=00); /* For IE8 and earlier */
+    }
+}
+
+@-moz-keyframes imagePush2Animation {
+    from {
+        -ms-transform: translate(0px,0px); /* IE 9 */
+        -moz-transform: rotateY(0px,0px); /* Chrome, Safari, Opera */
+        transform: translate(0px,0px);
+        display: block;
+    }
+    to {
+        -ms-transform: translate(-150px,0px); /* IE 9 */
+        -moz-transform: translate(-150px,0px); /* Chrome, Safari, Opera */
+        transform: translate(-150px,0px);
+        display: none;
+        opacity: 0.0;
+        filter: alpha(opacity=00); /* For IE8 and earlier */
+    }
+}
+
+@keyframes imagePush2Animation {
+
+    from {
+        -ms-transform: translate(0px,0px); /* IE 9 */
+        -webkit-transform: rotateY(0px,0px); /* Chrome, Safari, Opera */
+        transform: translate(0px,0px);
+        display: block;
+    }
+    to {
+         -ms-transform: translate(-150px,0px); /* IE 9 */
+        -webkit-transform: translate(-150px,0px); /* Chrome, Safari, Opera */
+        transform: translate(-150px,0px);
+        display: none;
+        opacity: 0.0;
+        filter: alpha(opacity=00); /* For IE8 and earlier */
+    }
+}

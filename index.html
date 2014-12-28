@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Karrot Slider</title>
+    <meta charset = "UTF-8" />
+    <link href="css/slider.css" rel="stylesheet" type="text/css"  />
+    <script src="js/sliderEffects.js"></script>
+    <script src="js/slider.js"></script>
+    
+    <style>
+        body {
+            margin:0px;
+            padding:0px;
+            font-family: sans-serif;
+        }
+        #info {
+            width: 900px;
+            margin: auto;
+            margin-bottom: 30px;
+            color: #434343;
+        }
+        #info #logo {
+            float: right;
+            width: 100px;
+            margin-top: -60px;
+        }
+        a {
+            text-decoration: none;
+            color: #7b7b7b;
+        }
+        a:hover {
+            text-decoration: none;
+            color: #4d4d4d;
+        }
+    </style>
+    
+</head>
+
+<body>
+     
+    <div id="slider" style="width: 900px; height: 505px; margin: auto;">
+        <img src="images/1.jpg"  alt="Imagen Geo Totem" class="sliderImage" >   
+    </div>
+        
+    <div id="info">
+        
+        <h1>Karrot Slider</h1>
+        
+        <img src="images/logo.png" id="logo" >
+        
+        <p>Karrot Slider a is non-jQuery Slider pure Javascript and CSS. Runs in Internet Explorer 10, Safari, Chrome, Firefox and Opera. Karrot Slider has 8 differents effects and we are working on more. Karrot Slider support responsive image mode, with 100% width, calling <a href="javascript:fullScreen();"><i>fullScreen()</i></a> function. Karrot Slider it's easy to implement on your site.</p>
+        
+        <p>Contact : <a href="mailto:info@estampworld.com">info@estampworld.com</a></p>
+        
+        <h2>Download</h2>
+        <p>Version 1.0 : <a href="https://github.com/eduardo22i/KarrotSlider">Github</a> </p>
+        
+        <h2>Configuration</h2>
+
+        <p>Include <b>slider.css</b> and <b>sliderEffects.js</b> in your file. </p>
+
+        <code>
+            &lt;link href="css/slider.css" rel="stylesheet" type="text/css"  /&gt; <br>
+            &lt;script src="js/sliderEffects.js"&gt;&lt;/script&gt;
+        </code>
+
+        <p>Create a div with ID <b>slider</b>, then set its Width and Height. Then, add the first image inside the div.</p>
+
+        <code>
+            &lt;div id="slider" style="width: 900px; height: 505px; margin: auto;"&gt; <br>
+            &nbsp;&lt;img src="images/1.jpg" &gt;  <br>
+            &lt;/div&gt;
+        </code>
+
+        <h2>Usage</h2>
+        
+        <p>Karrot Slider has 8 differents effects:</p>
+        
+        <ul>
+            <li>Dissolve</li>
+            <li>Slide Up </li>
+            <li>Slide Down </li>
+            <li>Slide Left </li>
+            <li>Slide Right </li>
+            <li>Mosaic </li>
+            <li>Window </li>
+            <li>Doors </li>
+        </ul>
+        
+        <p>All effects functions contains 2 parameters, the current image reference and the next image reference. </p>
+        
+        <code>
+            <i>//effect(current, next);</i> <br>
+            KSDissolve("images/1.jpg", "images/2.jpg");<br>
+            KSSlideUp("images/1.jpg", "images/2.jpg");<br>
+            KSSlideDown("images/1.jpg", "images/2.jpg");<br>
+            KSSlideLeft("images/1.jpg", "images/2.jpg");<br>
+            KSSlideRight("images/1.jpg", "images/2.jpg");<br>
+            KSMosaic("images/1.jpg", "images/2.jpg");<br>
+            KSWindows("images/1.jpg", "images/2.jpg");<br>
+            KSDoors("images/1.jpg", "images/2.jpg");<br>
+            
+        </code>
+        
+        
+        <h2>Example</h2>
+        
+        <p>Create 3 variables. An array of images, image display time as int and the current image integer.</p>
+
+        <code>
+            var images = ["images/1.jpg" , "images/2.jpg" , "images/3.jpg",  "images/4.jpg" ];<br>
+            var timing = 3000;<br>
+            var currentImg = 1;<br>
+        </code>
+        
+        <p>Create a function that selects the next image, the effect and increment the current image.</p>
+        
+        <code>
+            function karrotSlider() { <br>
+            
+            <br>
+            &nbsp;var nextimg = (currentImg + 1) > images.length ? 1 : currentImg + 1 ;<br>
+            &nbsp;var effect = Math.floor (Math.random()*6 +1 ); <br>
+            <br>
+            &nbsp;switch (effect) { <br>
+            &nbsp;&nbsp;case 1:  <br>
+            &nbsp;&nbsp;&nbsp;KSDissolve(images[currentImg- 1], images[nextimg- 1]) <br>
+            &nbsp;&nbsp;&nbsp;break; <br>
+            &nbsp;&nbsp;case 2: <br>
+            &nbsp;&nbsp;&nbsp;KSSlideUp(images[currentImg- 1], images[nextimg- 1]) <br>
+            &nbsp;&nbsp;&nbsp;break; <br>
+            &nbsp;&nbsp;case 3: <br>
+            &nbsp;&nbsp;&nbsp;KSSlideDown(images[currentImg- 1], images[nextimg- 1]) <br>
+            &nbsp;&nbsp;&nbsp;break; <br>
+            &nbsp;&nbsp;case 4: <br>
+            &nbsp;&nbsp;&nbsp;KSSlideLeft(images[currentImg- 1], images[nextimg- 1]) <br>
+            &nbsp;&nbsp;&nbsp;break; <br>
+            &nbsp;&nbsp;case 5: <br>
+            &nbsp;&nbsp;&nbsp;KSSlideRight(images[currentImg- 1], images[nextimg- 1]) <br>
+            &nbsp;&nbsp;&nbsp;break; <br>
+            &nbsp;&nbsp;case 6: <br>
+            &nbsp;&nbsp;&nbsp;KSMosaic(images[currentImg- 1], images[nextimg- 1]) <br>
+            &nbsp;&nbsp;&nbsp;break; <br>
+            &nbsp;&nbsp;case 7: <br>
+            &nbsp;&nbsp;&nbsp;KSWindows(images[currentImg- 1], images[nextimg- 1]) <br>
+            &nbsp;&nbsp;&nbsp;break; <br>
+            &nbsp;&nbsp;case 8: <br>
+            &nbsp;&nbsp;&nbsp;KSDoors(images[currentImg- 1], images[nextimg- 1]) <br>
+            &nbsp;&nbsp;&nbsp;break; <br>
+            &nbsp;} <br>
+            <br>
+            &nbsp;currentImg = (currentImg + 1) > images.length ? 1 :  currentImg + 1;<br>
+            <br>
+        }
+
+        </code>
+        
+        <p>With a time interval call your function.</p>
+        
+        <code>
+            setInterval(function () { karrotSlider() } , timing);
+        </code>
+        
+        <h2>FAQ</h2>
+        
+        <ul>
+            
+            <li>
+                <p>All images have to be the same size?</p>
+                <p>Yes :(</p>
+            </li>
+            
+            <li>
+                <p>I want fullscreen? :( </p>
+                <p>Call the function <a href="javascript:fullScreen();"><i>fullScreen();</i></a> in a script at the <b>end</b> of your html body.</p>
+            </li>
+                        
+        </ul>
+        
+        
+        
+    </div>
+    
+    <script>
+        //fullScreen () ;
+    </script>
+   
+</body>
+
+</html>
